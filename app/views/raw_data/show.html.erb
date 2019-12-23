@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @raw_datum.name %>
+</p>
+
+<p>
+  <strong>Time landscape:</strong>
+  <%= @raw_datum.time_landscape %>
+</p>
+
+<p>
+  <strong>Date:</strong>
+  <%= @raw_datum.date %>
+</p>
+
+<%= link_to 'Edit', edit_raw_datum_path(@raw_datum) %> |
+<%= link_to 'Back', raw_data_path %>

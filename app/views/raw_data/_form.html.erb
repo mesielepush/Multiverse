@@ -1,0 +1,32 @@
+<%= form_with(model: raw_datum, local: true) do |form| %>
+  <% if raw_datum.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(raw_datum.errors.count, "error") %> prohibited this raw_datum from being saved:</h2>
+
+      <ul>
+      <% raw_datum.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name, id: :raw_datum_name %>
+  </div>
+
+  <div class="field">
+    <%= form.label :time_landscape %>
+    <%= form.text_field :time_landscape, id: :raw_datum_time_landscape %>
+  </div>
+
+  <div class="field">
+    <%= form.label :date %>
+    <%= form.text_field :date, id: :raw_datum_date %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
